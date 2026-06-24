@@ -34,3 +34,30 @@ double Galaxia::getVelocidad() const {
 double Galaxia::getDesplazamientoAlRojo() const {
     return desplazamientoAlRojo;
 }
+
+void Galaxia::setNombre(string nom) {
+    nombre = nom;
+}
+
+void Galaxia::setDistancia(double dist) {
+    distancia = dist;
+}
+
+void Galaxia::calcularVelocidad(double H0) {
+    velocidad = H0 * distancia;  // v = H0 * d
+}
+
+void Galaxia::calcularDesplazamientoAlRojo() {
+    if (velocidad < VelocidadLuz) {
+        desplazamientoAlRojo = velocidad / VelocidadLuz;  // z = v / c
+    } else {
+        desplazamientoAlRojo = -1;
+    }
+}
+
+void Galaxia::mostrar() const {
+    cout << "Nombre: " << nombre << endl;
+    cout << "Distancia: " << distancia << " Mpc" << endl;
+    cout << "Velocidad de recesion: " << velocidad << " km/s" << endl;
+    cout << "Desplazamiento al rojo: " << desplazamientoAlRojo << endl;
+}
