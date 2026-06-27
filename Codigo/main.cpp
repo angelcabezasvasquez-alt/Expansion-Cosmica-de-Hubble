@@ -19,5 +19,12 @@ int main() {
     cout << "Universo creado exitosamente." << endl;
     cout << "Constante de Hubble: " << universo.getH0() << " km/s/Mpc" << endl;
     
+
+    cout << "Prueba de funcionagregarGalaxia() de la clase universo" << endl;
+    Galaxia g2("Via Lactea", 0.0);
+    universo.agregarGalaxia(g2);
+    cout << "Galaxia agregada al catalogo." << endl;
+    cout << "Total de galaxias: " << universo.getTotal() << endl;
+    
     return 0;
 }

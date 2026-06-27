@@ -23,3 +23,20 @@ Universo::~Universo() {
 
     delete[] catalogo;
 }
+
+void Universo::agregarGalaxia(const Galaxia& g) {
+    if (total >= capacidad) {
+        capacidad *= 2;
+        Galaxia** nuevo = new Galaxia*[capacidad];
+        for (int i = 0; i < total; i++) {
+            nuevo[i] = catalogo[i];
+        }
+        delete[] catalogo;
+        catalogo = nuevo;
+    }
+    
+    catalogo[total] = new Galaxia(g);
+    catalogo[total]->calcularVelocidad(H0);
+    catalogo[total]->calcularDesplazamientoAlRojo();
+    total++;
+}
