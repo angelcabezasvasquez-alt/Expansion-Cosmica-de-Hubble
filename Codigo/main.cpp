@@ -26,5 +26,12 @@ int main() {
     cout << "Galaxia agregada al catalogo." << endl;
     cout << "Total de galaxias: " << universo.getTotal() << endl;
     
+
+    cout << "Prueba de funcion cargarCatalogo()" << endl;
+    universo.cargarCatalogo("datos/catalogo.csv");
+    cout << "Total de galaxias en el catalogo: " << universo.getTotal() << endl;
+
+
     return 0;
 }
+
