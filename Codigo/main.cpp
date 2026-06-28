@@ -34,6 +34,22 @@ int main() {
     cout << "Prueba de funcion guardarResultados()" << endl;
     universo.guardarResultados("datos/resultados.csv");
     
+    cout << "Prueba de ordenamiento por distancia" << endl;
+    universo.ordenarPorDistancia();
+    universo.mostrarCatalogo();
+
+    cout << "Prueba de busqueda por nombre" << endl;
+    int pos = universo.buscarPorNombre("Andromeda");
+    if (pos != -1) {
+        cout << "Galaxia encontrada:" << endl;
+        universo.mostrarCatalogo();         
+    } else {
+        cout << "Galaxia no encontrada." << endl;
+    }
+
+    cout << "Prueba de estadisticas" << endl;
+    universo.mostrarEstadisticas();
+
     return 0;
 }
 
