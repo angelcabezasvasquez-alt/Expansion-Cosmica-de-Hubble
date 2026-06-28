@@ -31,7 +31,9 @@ int main() {
     universo.cargarCatalogo("datos/catalogo.csv");
     cout << "Total de galaxias en el catalogo: " << universo.getTotal() << endl;
 
-
+    cout << "Prueba de funcion guardarResultados()" << endl;
+    universo.guardarResultados("datos/resultados.csv");
+    
     return 0;
 }
 
