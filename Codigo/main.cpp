@@ -7,12 +7,11 @@ int main() {
     const double HUBBLE_CONSTANT = 70.0;
     Universo universo(HUBBLE_CONSTANT);
     
-    cout << "=========================================" << endl;
+    cout << "-----------------------------------------" << endl;
     cout << "    SIMULADOR DE LA LEY DE HUBBLE" << endl;
-    cout << "=========================================" << endl;
+    cout << "-----------------------------------------" << endl;
     cout << "Constante de Hubble: " << HUBBLE_CONSTANT << " km/s/Mpc" << endl << endl;
     
-    // Cargar el catalogo automaticamente al iniciar
     universo.cargarCatalogo("datos/catalogo.csv");
     cout << "Catalogo cargado. " << universo.getTotal() << " galaxias encontradas." << endl << endl;
     
